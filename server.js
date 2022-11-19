@@ -12,13 +12,21 @@ const link = require('./api/link');
 const id = require('./api/id')
 const download = require('./api/download');
 
+const cors = require('./helper/cors');
+
 const serveDouyinApi = port => {
     const app = express();
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
 
     app.get('/' , (req, res) => {
-        res.send('Hello World');
+        res.status(200);
+        cors.addCorsHeader(res);
+        res.json({
+            'ok': true,
+            'status': 200,
+            'result': 'Douyin API is running'
+        })
     });
 
     app.get('/link', link);
