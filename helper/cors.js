@@ -1,5 +1,5 @@
 /**
- * @Description :
+ * @Description : Add CORS headers to response header
  * @Author      : manho <manho30@outlook.my>
  * @Date        : 19/11/2022 13:44
  * @File        : cors.js

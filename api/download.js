@@ -1,5 +1,5 @@
 /**
- * @Description :
+ * @Description : Download interface
  * @Author      : manho <manho30@outlook.my>
  * @Date        : 19/11/2022 22:06
  * @File        : download.js

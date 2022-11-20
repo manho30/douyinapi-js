@@ -1,5 +1,5 @@
 /**
- * @Description :
+ * @Description : Parse data from DouYin
  * @Author      : manho <manho30@outlook.my>
  * @Date        : 19/11/2022 23:29
  * @File        : parse.js

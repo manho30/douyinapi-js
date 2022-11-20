@@ -13,11 +13,13 @@ const id = require('./api/id')
 const download = require('./api/download');
 
 const cors = require('./helper/cors');
+const limiter = require('./helper/limiter');
 
 const serveDouyinApi = port => {
     const app = express();
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
+    app.use(limiter.limiter);
 
     app.get('/' , (req, res) => {
         res.status(200);
