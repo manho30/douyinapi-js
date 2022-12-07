@@ -83,7 +83,7 @@ router.get('/id', async (req, res) => {
         if (_link.match(/video\/(\d+)?/) || _link.match(/modal_id=(\d+)/)) {
             res.status(200)
             cors.addCorsHeader(res)
-            _json ? res.json({'ok': true, 'status': 200, 'id': parseId(_link)}) : res.send(parseId());
+            _json ? res.json({'ok': true, 'status': 200, 'result': parseId(_link)}) : res.send(parseId());
             return;
         }
     } catch (e) {
