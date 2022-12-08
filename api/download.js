@@ -51,12 +51,13 @@ router.get('/download', async (req, res) => {
             }
 
             if (_result_.item_list[0].image) {
-                cors.addCorsHeader(res)
                 /** handle image */
                 _type_ = 'image'
-                res.json(parse.parseImageResponse(_result_, _id))
+                cors.addCorsHeader(res)
+                return res.json(parse.parseImageResponse(_result_, _id))
             } else {
-                res.json(parse.parseVideoResponse(_result_, _id))
+                cors.addCorsHeader(res)
+                return res.json(parse.parseVideoResponse(_result_, _id))
             }
 
         })
